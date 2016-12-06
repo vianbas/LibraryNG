@@ -1,0 +1,290 @@
+2015-12-13 07:02:40 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\xampp\htdocs\Test_AdminLTE\advanced\yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\xampp\htdocs\Test_AdminLTE\advanced\yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-12-13 07:02:38 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aditya\\AppData\\Roaming'
+    'CLASSPATH' => '.;c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-SEOBD6C'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aditya'
+    'LOCALAPPDATA' => 'C:\\Users\\Aditya\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-SEOBD6C'
+    'MOZ_PLUGIN_PATH' => 'C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\syswow64;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.8.0_20\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\MinGW\\bin;C:\\xampp\\php;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QTJAVA' => 'c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-SEOBD6C'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-SEOBD6C'
+    'USERNAME' => 'Aditya'
+    'USERPROFILE' => 'C:\\Users\\Aditya'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1449986558.5783
+    'REQUEST_TIME' => 1449986558
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-12-15 02:06:41 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Unknown option: --migartionPath' in C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Controller.php:87
+Stack trace:
+#0 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#1 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#2 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#3 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 C:\xampp\htdocs\Test_AdminLTE\advanced\yii(27): yii\base\Application->run()
+#5 {main}
+2015-12-15 02:06:40 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aditya\\AppData\\Roaming'
+    'CLASSPATH' => '.;c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-SEOBD6C'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aditya'
+    'LOCALAPPDATA' => 'C:\\Users\\Aditya\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-SEOBD6C'
+    'MOZ_PLUGIN_PATH' => 'C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\syswow64;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.8.0_20\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\MinGW\\bin;C:\\xampp\\php;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QTJAVA' => 'c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-SEOBD6C'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-SEOBD6C'
+    'USERNAME' => 'Aditya'
+    'USERPROFILE' => 'C:\\Users\\Aditya'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1450141600.7077
+    'REQUEST_TIME' => 1450141600
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+        1 => 'migrate'
+        2 => '--migartionPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2015-12-15 02:06:54 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\xampp\htdocs\Test_AdminLTE\advanced\yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 C:\xampp\htdocs\Test_AdminLTE\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\xampp\htdocs\Test_AdminLTE\advanced\yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-12-15 02:06:51 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Aditya\\AppData\\Roaming'
+    'CLASSPATH' => '.;c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-SEOBD6C'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Aditya'
+    'LOCALAPPDATA' => 'C:\\Users\\Aditya\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-SEOBD6C'
+    'MOZ_PLUGIN_PATH' => 'C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\;C:\\Program Files\\Lenovo\\Bluetooth Software\\syswow64;C:\\Program Files (x86)\\AMD\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.8.0_20\\bin;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\MinGW\\bin;C:\\xampp\\php;c:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\ProgramData\\ComposerSetup\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QTJAVA' => 'c:\\Program Files (x86)\\QuickTime\\QTSystem\\QTJava.zip'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Aditya\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-SEOBD6C'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-SEOBD6C'
+    'USERNAME' => 'Aditya'
+    'USERPROFILE' => 'C:\\Users\\Aditya'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1450141611.6115
+    'REQUEST_TIME' => 1450141611
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\Test_AdminLTE\\advanced\\yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
